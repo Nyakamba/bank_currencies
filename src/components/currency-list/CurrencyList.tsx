@@ -14,7 +14,7 @@ interface EnhanceCountryProps {
 }
 
 interface CurrencyListProps {
-  filterText: string;
+  searchText: string;
   fxRates: Currency[];
 }
 
@@ -46,8 +46,8 @@ export function enhanceCountries({ countries, fxRates }: EnhanceCountryProps) {
   });
 }
 
-const CurrencyList = ({ filterText, fxRates }: CurrencyListProps) => {
-  const filterString = filterText ? filterText.toUpperCase() : "";
+const CurrencyList = ({ searchText, fxRates }: CurrencyListProps) => {
+  const filterString = searchText ? searchText.toUpperCase() : "";
 
   const enhancedCountryList = enhanceCountries({
     countries: countryList,
@@ -60,7 +60,7 @@ const CurrencyList = ({ filterText, fxRates }: CurrencyListProps) => {
   });
 
   if (filteredCountries.length === 0) {
-    const noResultText = `No currency found: "${filterText}"`;
+    const noResultText = `No currency found: "${searchText}"`;
     return <div className="">{noResultText}</div>;
   }
   return filteredCountries.map((enhancedFxRate) => (

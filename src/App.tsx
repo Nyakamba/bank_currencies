@@ -1,6 +1,5 @@
-import CurrencyListItem from "./components/currency-list-item/CurrencyListItem";
-import SearchBar from "./components/search-bar/SearchBar";
 import { MdOutlineCurrencyExchange } from "react-icons/md";
+import FilteredCurrency from "./components/filtered-currency-list/FilteredCurrency";
 
 function App() {
   return (
@@ -15,13 +14,7 @@ function App() {
         </div>
       </header>
       <div>
-        <CurrencyListItem
-          countryCode="Us"
-          countryName="United state of America"
-          currencyCode="USD"
-          currencyName="Us dollar"
-          exchangeRate={2.4}
-        />
+        <FilteredCurrency />
       </div>
     </div>
   );
