@@ -17,7 +17,7 @@ function App() {
       <div>
         <CurrencyListItem
           countryCode="Us"
-          countryName="USA"
+          countryName="United state of America"
           currencyCode="USD"
           currencyName="Us dollar"
           exchangeRate={2.4}

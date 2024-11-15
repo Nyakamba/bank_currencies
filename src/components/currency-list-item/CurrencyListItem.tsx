@@ -3,9 +3,9 @@ import React from "react";
 interface CurrencyListItemProps {
   countryCode: string;
   countryName: string;
-  currencyName: string;
+  currencyName?: string;
   currencyCode: string;
-  exchangeRate: number;
+  exchangeRate?: number;
 }
 
 const CurrencyListItem = ({

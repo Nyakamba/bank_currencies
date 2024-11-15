@@ -10,3 +10,19 @@ export interface Currency {
     lastModified: string;
   };
 }
+
+export interface Country {
+  countryName: string;
+  countryCode: string;
+  currencyCode: string;
+  exchangeRate?: number;
+  currencyName?: string;
+}
+
+// export interface FxRate {
+//   currency: string;
+//   nameI18N: string;
+//   exchangeRate: {
+//     middle: number;
+//   };
+// }
