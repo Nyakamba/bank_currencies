@@ -17,7 +17,7 @@ const CurrencyListItem = ({
 }: CurrencyListItemProps) => {
   const country_name = countryName ? countryName : "-";
   return (
-    <li className="flex flex-row  items-center  bg-white p-4 rounded shadow m-3 text-[20px] font-medium space-x-4 min-w-[200px]">
+    <li className="flex flex-row  items-center  bg-white p-4 rounded shadow text-[20px] font-medium space-x-4 min-w-[200px]">
       <div className="w-[15vmin] min-w-[35px] flex items-center">
         <img
           src={`/flags/${countryCode.toLowerCase()}.png`}
@@ -32,13 +32,15 @@ const CurrencyListItem = ({
         {currencyCode}
       </div>
       <div
-        className="w-fit grow overflow-hidden whitespace-nowrap text-ellipsis"
+        className="w-fit grow overflow-hidden whitespace-nowrap  text-ellipsis"
         title={country_name}
       >
         {country_name}
       </div>
-      <div className="">{exchangeRate ? exchangeRate.toFixed(4) : "-"}</div>
-      <div className="w-[40px]">KES</div>
+      <div className=" w-fit">
+        {exchangeRate ? exchangeRate.toFixed(4) : "-"}
+      </div>
+      <div className="w-[40px] ">KES</div>
     </li>
   );
 };

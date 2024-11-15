@@ -63,16 +63,20 @@ const CurrencyList = ({ searchText, fxRates }: CurrencyListProps) => {
     const noResultText = `No currency found: "${searchText}"`;
     return <div className="">{noResultText}</div>;
   }
-  return filteredCountries.map((enhancedFxRate) => (
-    <CurrencyListItem
-      countryCode={enhancedFxRate.countryCode}
-      countryName={enhancedFxRate.countryName}
-      currencyCode={enhancedFxRate.currencyCode}
-      exchangeRate={enhancedFxRate.exchangeRate}
-      currencyName={enhancedFxRate.currencyName}
-      key={enhancedFxRate.countryCode}
-    />
-  ));
+  return (
+    <ul className="p-4 space-y-4">
+      {filteredCountries.map((enhancedFxRate) => (
+        <CurrencyListItem
+          countryCode={enhancedFxRate.countryCode}
+          countryName={enhancedFxRate.countryName}
+          currencyCode={enhancedFxRate.currencyCode}
+          exchangeRate={enhancedFxRate.exchangeRate}
+          currencyName={enhancedFxRate.currencyName}
+          key={enhancedFxRate.countryCode}
+        />
+      ))}
+    </ul>
+  );
 };
 
 export default CurrencyList;
