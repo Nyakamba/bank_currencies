@@ -1,3 +1,4 @@
+import CurrencyListItem from "./components/currency-list-item/CurrencyListItem";
 import SearchBar from "./components/search-bar/SearchBar";
 
 function App() {
@@ -7,7 +8,13 @@ function App() {
         <h1 className="text-[32px] font-bold">Currency Exchange App</h1>
       </header>
       <div>
-        <SearchBar searchText="" onSearchTextChange={() => "sss"} />
+        <CurrencyListItem
+          countryCode="Us"
+          countryName="USA"
+          currencyCode="USD"
+          currencyName="Us dollar"
+          exchangeRate={2.4}
+        />
       </div>
     </div>
   );
