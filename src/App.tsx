@@ -1,5 +1,6 @@
 import { MdOutlineCurrencyExchange } from "react-icons/md";
 import FilteredCurrency from "./components/filtered-currency-list/FilteredCurrency";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
           </h1>
         </div>
       </header>
-      <div>
-        <FilteredCurrency />
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<FilteredCurrency />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -13,7 +13,11 @@ const SearchBar = ({ searchText, onSearchTextChange }: SearchBarProps) => {
 
     onSearchTextChange(value);
 
-    window.location.hash = `#search=${value}`;
+    if (value === "") {
+      window.location.hash = "";
+    } else {
+      window.location.hash = `#search=${value}`;
+    }
   };
 
   return (
