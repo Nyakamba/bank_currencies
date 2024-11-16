@@ -1,4 +1,4 @@
-# WCurrency Excahnge App
+# Currency Excahnge App
 
 One page application that displays all the currencies from the bank and their respective exchange rate. The base currency is Kenya Shillings (KES)
 
