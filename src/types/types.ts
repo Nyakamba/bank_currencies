@@ -1,13 +1,13 @@
 export interface Currency {
   currency: string;
-  precision: number;
+  precision?: number;
   nameI18N?: string;
   exchangeRate: {
-    buy: number;
-    middle: number;
-    sell: number;
-    indicator: number;
-    lastModified: string;
+    buy?: number;
+    middle?: number;
+    sell?: number;
+    indicator?: number;
+    lastModified?: string;
   };
 }
 

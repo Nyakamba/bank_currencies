@@ -1,7 +1,6 @@
-import React from "react";
 import countries from "../../data/countries.json";
-import CurrencyListItem from "../currency-list-item/CurrencyListItem";
 import { Country, Currency } from "../../types/types";
+import CurrencyListItem from "../currency-list-item/CurrencyListItem";
 
 interface filterCountryProps {
   countryList: Country[];

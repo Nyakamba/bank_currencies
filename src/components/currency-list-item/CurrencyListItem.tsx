@@ -1,5 +1,3 @@
-import React from "react";
-
 interface CurrencyListItemProps {
   countryCode: string;
   countryName: string;
