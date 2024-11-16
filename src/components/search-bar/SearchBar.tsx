@@ -16,7 +16,7 @@ const SearchBar = ({ searchText, onSearchTextChange }: SearchBarProps) => {
     if (value === "") {
       window.location.hash = "";
     } else {
-      window.location.hash = `#search=${value}`;
+      window.location.hash = `search?query=${value}`;
     }
   };
 
