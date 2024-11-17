@@ -6,4 +6,4 @@ One page application that displays all the currencies from the bank and their re
 
 - ReactJS
 - Tailwind CSS
-- React Riuter Dom
+- React Router Dom
